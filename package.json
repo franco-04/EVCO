@@ -1,20 +1,17 @@
 {
-  "name": "evco",
+  "name": "node-cicd-cloudrun",
   "version": "1.0.0",
-  "main": "index.js",
+  "type": "commonjs",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/server.js",
+    "test": "jest --runInBand --detectOpenHandles"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/franco-04/EVCO.git"
+  "dependencies": {
+    "express": "^4.19.2"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/franco-04/EVCO/issues"
-  },
-  "homepage": "https://github.com/franco-04/EVCO#readme",
-  "description": ""
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
 }
